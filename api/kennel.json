@@ -1,73 +1,73 @@
 {
-  "animals": [
-    {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
-    },
-    {
-      "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd"
-    },
-    {
-      "id": 3,
-      "name": "Esme",
-      "breed": "Pittbull"
-    }
-  ],
-  "owners": [
-    {
-      "id": 1,
-      "name": "Katie",
-      "phoneNumber": "(615) 123 - 4567"
-    },
-    {
-      "id": 2,
-      "name": "Roxanne",
-      "phoneNumber": "(502) 123 - 4567"
-    },
-    {
-      "id": 3,
-      "name": "Emily",
-      "phoneNumber": "(423) 123 - 4567"
-    }
-  ],
-  "employees": [
-    {
-      "id": 1,
-      "name": "Cooper",
-      "job": "Receptionist"
-    },
-    {
-      "id": 2,
-      "name": "Alyssa",
-      "job": "Coffee"
-    },
-    {
-        "id": 3,
-        "name": "Andy",
-        "job": "Architect"
-      }
-  ],
-  "locations": [
-    {
-      "id": 1,
-      "city": "New York",
-      "state": "New York",
-      "address": "123 98th St"
-    },
-    {
-      "id": 2,
-      "city": "Nashville",
-      "state": "Tennessee",
-      "address": "456 Stillwater Circle"
-    },
-    {
-      "id": 3,
-      "city": "Eugene",
-      "state": "Oregon",
-      "address": "789 East Moore Bean Floor 2"
-    }
-  ]
+    "animals": [
+        {
+            "id": 1,
+            "name": "Doodles",
+            "breed": "Poodle"
+        },
+        {
+            "id": 2,
+            "name": "Decker",
+            "breed": "German Sheperd"
+        },
+        {
+            "id": 3,
+            "name": "Esme",
+            "breed": "Pittbull"
+        }
+    ],
+    "owners": [
+        {
+            "id": 1,
+            "name": "Katie",
+            "phoneNumber": "(615) 123 - 4567"
+        },
+        {
+            "id": 2,
+            "name": "Roxanne",
+            "phoneNumber": "(502) 123 - 4567"
+        },
+        {
+            "id": 3,
+            "name": "Emily",
+            "phoneNumber": "(423) 123 - 4567"
+        }
+    ],
+    "employees": [
+        {
+            "id": 1,
+            "name": "Cooper",
+            "job": "Receptionist"
+        }, 
+        {
+            "id": 2,
+            "name": "Alyssa",
+            "job": "Coffee"
+        },
+        {
+            "id": 3,
+            "name": "Andy",
+            "job": "Architect"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "city": "New York",
+            "state": "New York",
+            "address": "123 98th St"
+        },
+        {
+            "id": 2,
+            "city": "Nashville",
+            "state": "Tennessee",
+            "address": "456 Stillwater Circle"
+        },
+        {
+            "id": 3,
+            "city": "Eugene",
+            "state": "Oregon",
+            "address": "789 East Moore Bean Floor 2"
+        }
+    ]
 }
