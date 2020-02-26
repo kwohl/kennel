@@ -4,6 +4,7 @@ import './LocationDetail.css'
 
 const LocationDetail = props => {
   const [location, setLocation] = useState({ city: "", state: "", address: "" });
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
@@ -14,8 +15,17 @@ const LocationDetail = props => {
           state: location.state,
           address: location.address
         });
+        setIsLoading(false);
       });
   }, [props.locationId]);
+
+  const handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    setIsLoading(true);
+    LocationManager.delete(props.locationId).then(() =>
+      props.history.push("/locations")
+    );
+  };
 
   return (
     <div className="card">
@@ -25,6 +35,7 @@ const LocationDetail = props => {
         </picture> */}
         <h3>Location: <span style={{ color: 'darkslategrey' }}>{location.city}, {location.state}</span></h3>
         <p>Address: {location.address}</p>
+        <button type="button" disabled={isLoading} onClick={handleDelete}>Close Location</button>
       </div>
     </div>
   );
