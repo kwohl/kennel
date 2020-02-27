@@ -14,23 +14,42 @@
       "id": 3,
       "name": "esme",
       "breed": "Pittbull"
+    },
+    {
+      "name": "timmy",
+      "breed": "Terrier",
+      "id": 4
+    },
+    {
+      "name": "Dog",
+      "breed": "Doberman",
+      "id": 5
     }
   ],
   "owners": [
     {
       "id": 1,
       "name": "Katie",
-      "phoneNumber": "(615) 123 - 4567"
+      "phoneNumber": "(615) 123 - 4567",
+      "petName": "Annie & Pox"
     },
     {
       "id": 2,
       "name": "Roxanne",
-      "phoneNumber": "(502) 123 - 4567"
+      "phoneNumber": "(502) 123 - 4567",
+      "petName": "Mellie & Cocoa"
     },
     {
       "id": 3,
       "name": "Emily",
-      "phoneNumber": "(423) 123 - 4567"
+      "phoneNumber": "(423) 123 - 4567",
+      "petName": "Roo"
+    },
+    {
+      "name": "Susan",
+      "phoneNumber": "(615) 987 - 6543",
+      "petName": "Bunny",
+      "id": 4
     }
   ],
   "employees": [
@@ -48,6 +67,11 @@
       "id": 3,
       "name": "Andy",
       "job": "Architect"
+    },
+    {
+      "name": "Kürt",
+      "job": "Dog Greeter",
+      "id": 4
     }
   ],
   "locations": [
