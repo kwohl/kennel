@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom"
+import { NavLink, withRouter } from "react-router-dom"
 import './NavBar.css'
 
 class NavBar extends Component {
 
-  render(){
+  render() {
 
     return (
       <header>
@@ -13,11 +13,21 @@ class NavBar extends Component {
         </h1>
         <nav>
           <ul className="container">
-            <li><Link className="nav-link" to="/">Home</Link></li>
-            <li><Link className="nav-link" to="/animals">Animals</Link></li>
-            <li><Link className="nav-link" to="/locations">Locations</Link></li>
-            <li><Link className="nav-link" to="/employees">Employees</Link></li>
-            <li><Link className="nav-link" to="/owners">Owners</Link></li>
+            <li><NavLink className="nav-link" to="/ " activeStyle={{
+              color: "lime"
+            }}>Home</NavLink></li>
+            <li><NavLink className="nav-link" to="/animals" activeStyle={{
+              color: "lime"
+            }}>Animals</NavLink></li>
+            <li><NavLink className="nav-link" to="/locations" activeStyle={{
+              color: "lime"
+            }}>Locations</NavLink></li>
+            <li><NavLink className="nav-link" to="/employees" activeStyle={{
+              color: "lime"
+            }}>Employees</NavLink></li>
+            <li><NavLink className="nav-link" to="/owners" activeStyle={{
+              color: "lime"
+            }}>Owners</NavLink></li>
           </ul>
         </nav>
       </header>

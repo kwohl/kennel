@@ -17,6 +17,7 @@ const Login = props => {
         the customer enters into session storage.
         ...Let's just trust the user... That's a good idea, right????
     */
+    
     sessionStorage.setItem(
       "credentials",
       JSON.stringify(credentials)
@@ -42,6 +43,8 @@ const Login = props => {
           <label htmlFor="inputPassword">Password</label>
         </div>
         <button type="submit">Sign in</button>
+        {/* <input type="checkbox" id="rememberMe" name="rememberMe" value="rememberMe" />
+        <label for="rememberMe">Remember Me</label> */}
       </fieldset>
     </form>
   );

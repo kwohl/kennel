@@ -25,7 +25,13 @@ const AnimalDetail = props => {
             props.history.push("/animals")
         );
     };
-
+    if (animal.name === undefined) {
+        return (
+            <div className='card-content'>
+                <p>Animal Does Not Exist</p>
+            </div>
+        )
+    } else {
     return (
         <div className="card">
             <div className="card-content">
@@ -42,6 +48,7 @@ const AnimalDetail = props => {
             </div>
         </div>
     );
+    }
 };
 
 export default AnimalDetail;
