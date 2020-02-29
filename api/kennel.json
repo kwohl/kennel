@@ -24,6 +24,21 @@
       "name": "Dog",
       "breed": "Doberman",
       "id": 5
+    },
+    {
+      "name": "Annie",
+      "breed": "Siamese",
+      "id": 6
+    },
+    {
+      "name": "Pox",
+      "breed": "Ragdoll",
+      "id": 7
+    },
+    {
+      "name": "Roo",
+      "breed": "Coon Hound",
+      "id": 8
     }
   ],
   "owners": [
@@ -46,10 +61,10 @@
       "petName": "Roo"
     },
     {
+      "id": 4,
       "name": "Susan",
       "phoneNumber": "(615) 987 - 6543",
-      "petName": "Bunny",
-      "id": 4
+      "petName": "Bunny"
     }
   ],
   "employees": [
@@ -61,7 +76,7 @@
     {
       "id": 2,
       "name": "Alyssa",
-      "job": "Coffee"
+      "job": "Moral Support"
     },
     {
       "id": 3,
@@ -79,7 +94,7 @@
       "id": 1,
       "city": "New York",
       "state": "New York",
-      "address": "123 98th St"
+      "address": "123 98th St."
     },
     {
       "id": 2,

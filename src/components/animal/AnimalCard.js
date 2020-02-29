@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Animal.css";
 import { Link } from 'react-router-dom';
-import {firstLetterCase} from '../../modules/helpers';
+import { firstLetterCase } from '../../modules/helpers';
 
 const AnimalCard = props => {
   return (
@@ -17,6 +17,10 @@ const AnimalCard = props => {
         <Link to={`/animals/${props.animal.id}`}>
           <button>Details</button>
         </Link>
+        <button type="button"
+          onClick={() => props.history.push(`/animals/${props.animal.id}/edit`)}>
+          Edit
+        </button>
         <button type="button" onClick={() => props.deleteAnimal(props.animal.id)}>Discharge Animal</button>
       </div>
     </div>
