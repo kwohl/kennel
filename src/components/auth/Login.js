@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 const Login = props => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const setUser = props.setUser;
 
   // Update state whenever an input field is edited
   const handleFieldChange = (evt) => {
@@ -22,6 +23,8 @@ const Login = props => {
       "credentials",
       JSON.stringify(credentials)
     );
+
+    setUser()
     props.history.push("/");
   }
 

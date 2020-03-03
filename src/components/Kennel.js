@@ -1,18 +1,50 @@
-import React, { Component } from "react"
-import NavBar from "./nav/NavBar"
-import ApplicationViews from "./ApplicationViews"
+import React, { useState } from "react";
+import NavBar from "./nav/NavBar";
+import ApplicationViews from "./ApplicationViews";
+import "./Kennel.css";
 
-import "./Kennel.css"
+const Kennel = () => {
+  const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
 
-class Kennel extends Component {
-  render() {
-    return (
-      <>
-        <NavBar />
-        <ApplicationViews />
-      </>
-    )
-  }
-}
+  const [hasUser, setHasUser] = useState(isAuthenticated());
 
-export default Kennel
+  const setUser = user => {
+    sessionStorage.setItem("credentials", JSON.stringify(user));
+    setHasUser(isAuthenticated());
+  };
+
+  return (
+    <>
+      <NavBar hasUser={hasUser} />
+      <ApplicationViews hasUser={hasUser} setUser={setUser} />
+    </>
+  );
+};
+
+export default Kennel;
+
+
+
+
+
+
+//TODO: Ask instructor team about 'class Kennel extends Component'
+// import React, { Component } from "react"
+// import NavBar from "./nav/NavBar"
+// import ApplicationViews from "./ApplicationViews"
+
+// import "./Kennel.css"
+
+// class Kennel extends Component {
+  
+//   render() {
+//     return (
+//       <>
+//         <NavBar />
+//         <ApplicationViews />
+//       </>
+//     )
+//   }
+// }
+
+// export default Kennel
