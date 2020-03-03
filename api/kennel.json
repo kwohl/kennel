@@ -3,42 +3,26 @@
     {
       "id": 1,
       "name": "doodles",
-      "breed": "Poodle"
-    },
-    {
-      "id": 2,
-      "name": "decker",
-      "breed": "German Sheperd"
-    },
-    {
-      "id": 3,
-      "name": "esme",
-      "breed": "Pittbull"
-    },
-    {
-      "name": "timmy",
-      "breed": "Terrier",
-      "id": 4
-    },
-    {
-      "name": "Dog",
-      "breed": "Doberman",
-      "id": 5
+      "breed": "Poodle",
+      "employeeId": 1
     },
     {
       "name": "Annie",
       "breed": "Siamese",
-      "id": 6
+      "id": 6,
+      "employeeId": 2
     },
     {
       "name": "Pox",
       "breed": "Ragdoll",
-      "id": 7
+      "id": 7,
+      "employeeId": 1
     },
     {
+      "id": 8,
       "name": "Roo",
       "breed": "Coon Hound",
-      "id": 8
+      "employeeId": 4
     }
   ],
   "owners": [

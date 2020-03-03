@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react"
 import AnimalManager from "../../modules/AnimalManager"
 import "./AnimalForm.css"
+import EmployeeManager from "../../modules/EmployeeManager"
 
 const AnimalEditForm = props => {
-  const [animal, setAnimal] = useState({ name: "", breed: "" });
+  const [animal, setAnimal] = useState({ name: "", breed: "", employeeId: "" });
+  const [employees, setEmployees] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
   const handleFieldChange = evt => {
-    const stateToChange = { ...animal };
+    const stateToChange = { ...animal, ...employees};
     stateToChange[evt.target.id] = evt.target.value;
     setAnimal(stateToChange);
   };
@@ -20,7 +22,8 @@ const AnimalEditForm = props => {
     const editedAnimal = {
       id: props.match.params.animalId,
       name: animal.name,
-      breed: animal.breed
+      breed: animal.breed,
+      employeeId: parseInt(animal.employeeId)
     };
 
     AnimalManager.update(editedAnimal)
@@ -33,7 +36,13 @@ const AnimalEditForm = props => {
         setAnimal(animal);
         setIsLoading(false);
       });
+    EmployeeManager.getAll()
+      .then(employees => {
+        setEmployees(employees);
+      });
   }, []);
+
+// const employees = EmployeeManager.getAll()
 
   return (
     <>
@@ -60,6 +69,21 @@ const AnimalEditForm = props => {
             />
             <label htmlFor="breed">Breed</label>
           </div>
+
+          <select
+            className="form-control"
+            id="employeeId"
+            value={animal.employeeId}
+            onChange={handleFieldChange}
+          >
+            {employees.map(employee =>
+              <option key={employee.id} value={employee.id}>
+                {employee.name}
+              </option>
+            )}
+          </select>
+          <label htmlFor="employeeId">Employee</label>
+
           <div className="alignRight">
             <button
               type="button" disabled={isLoading}
