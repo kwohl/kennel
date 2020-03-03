@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import LocationManager from '../../modules/LocationManager';
-import './LocationDetail.css'
+import './LocationDetail.css';
+import EmployeeManager from '../../modules/AnimalManager';
+import EmployeeCard from '../employee/EmployeeCard';
 
 const LocationDetail = props => {
-  const [location, setLocation] = useState({ city: "", state: "", address: "" });
+  const [location, setLocation] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
     //get(id) from AnimalManager and hang on to the data; put it into state
-    LocationManager.get(props.locationId)
-      .then(location => {
-        setLocation({
-          city: location.city,
-          state: location.state,
-          address: location.address
-        });
-        setIsLoading(false);
+    LocationManager.getWithEmployees(props.match.params.locationId)
+      .then(APIResult => {
+        setLocation(APIResult)
+        setEmployees(APIResult.employees)
       });
-  }, [props.locationId]);
+
+        setIsLoading(false);
+    }, []);
 
   const handleDelete = () => {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
@@ -35,6 +36,14 @@ const LocationDetail = props => {
         </picture> */}
         <h3>Location: <span style={{ color: 'darkslategrey' }}>{location.city}, {location.state}</span></h3>
         <p>Address: {location.address}</p>
+        <h4>Employees:</h4>
+        {employees.map(employee => 
+          <EmployeeCard
+            key={employee.id}
+            employee={employee}
+            {...props}
+          />
+          )}
         <button type="button" disabled={isLoading} onClick={handleDelete}>Close Location</button>
       </div>
     </div>

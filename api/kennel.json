@@ -55,22 +55,26 @@
     {
       "id": 1,
       "name": "Cooper",
-      "job": "Receptionist"
+      "job": "Receptionist",
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Alyssa",
-      "job": "Moral Support"
+      "job": "Moral Support",
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Andy",
-      "job": "Architect"
+      "job": "Architect",
+      "locationId": 2
     },
     {
       "name": "Kürt",
       "job": "Dog Greeter",
-      "id": 4
+      "id": 4,
+      "locationId": 3
     }
   ],
   "locations": [

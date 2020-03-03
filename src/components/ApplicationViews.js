@@ -93,6 +93,7 @@ class ApplicationViews extends Component {
               return (
                 <LocationDetail
                   locationId={parseInt(props.match.params.locationId)}
+                  employeeId={parseInt(props.match.params.employeeId)}
                   {...props}
                 />
               );
