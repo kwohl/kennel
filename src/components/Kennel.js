@@ -13,9 +13,15 @@ const Kennel = () => {
     setHasUser(isAuthenticated());
   };
 
+  const clearUser = () => {
+    sessionStorage.clear();
+    setHasUser(isAuthenticated());
+  };
+
   return (
     <>
-      <NavBar hasUser={hasUser} />
+    {/* NavBar component props: hasUser (variabe from state of Kennel) & clearUser (function from Kennel) */}
+      <NavBar hasUser={hasUser} clearUser={clearUser}/>
       <ApplicationViews hasUser={hasUser} setUser={setUser} />
     </>
   );
